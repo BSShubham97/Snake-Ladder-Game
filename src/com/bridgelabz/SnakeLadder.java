@@ -9,8 +9,21 @@ public class SnakeLadder<board, START, END> {
 
         Utility utility= new Utility();
 
-    int[] board =new int[100];
+    int[] board = new int[100];
+
+        // declare all the snakes and ladders in a array
+        int snakesLaddersArray [] = new int [6]; // create a 6 element array
+        // store the snakes and ladders location in the array
+        snakesLaddersArray [0] = 54;
+        snakesLaddersArray [1] = 90;
+        snakesLaddersArray [2] = 99;
+        snakesLaddersArray [3] = 9;
+        snakesLaddersArray [4] = 40;
+        snakesLaddersArray [5] = 67;
+
     int START=0;
+    int positionPlayer=1;
+    int rollTimes=0;
     int END;
         END = board.length;
         int i;
@@ -21,14 +34,30 @@ public class SnakeLadder<board, START, END> {
     System.out.println("END POSITION:"+END);
     System.out.println("----------------------------------");
 
-        /**
-         * DICE ROLL
-         */
-        int roll;
-        roll=utility.diceRoll();
-        System.out.println("DICE ROLL:"+roll);
+                for(positionPlayer=1;positionPlayer<=100;positionPlayer++) {
+                    int roll;
+
+                    roll = utility.diceRoll();
+                    System.out.println("DICE ROLL:" + roll);
+                    rollTimes++;
+                    positionPlayer = positionPlayer + roll;
+                    /**
+                     * CHECK OPTION FROM 1).NO MOVE 2).LADDER 3).SNAKE
+                     */
+                    positionPlayer = utility.getPosition(positionPlayer, roll, snakesLaddersArray);
+                    System.out.println("Position of player:"+positionPlayer);
+                    System.out.println("Times Dice Rolled:"+rollTimes);
+                    System.out.println("--------------------------------------------------------");
+
+                }
+
+            }
+        }
 
 
-    }
 
-}
+
+
+
+
+
