@@ -14,12 +14,12 @@ public class SnakeLadder<board, START, END> {
         // declare all the snakes and ladders in a array
         int snakesLaddersArray [] = new int [6]; // create a 6 element array
         // store the snakes and ladders location in the array
-        snakesLaddersArray [0] = 54;
-        snakesLaddersArray [1] = 90;
-        snakesLaddersArray [2] = 99;
-        snakesLaddersArray [3] = 9;
-        snakesLaddersArray [4] = 40;
-        snakesLaddersArray [5] = 67;
+        snakesLaddersArray [0] = 54;    //snake
+        snakesLaddersArray [1] = 90;    //snake
+        snakesLaddersArray [2] = 92;    //snake
+        snakesLaddersArray [3] = 9;     //ladder
+        snakesLaddersArray [4] = 40;    //ladder
+        snakesLaddersArray [5] = 67;    //ladder
 
     int START=0;
     int positionPlayer=1;
