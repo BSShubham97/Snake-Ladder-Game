@@ -62,10 +62,24 @@ public class Utility {
 
         }
 
-        return userPosition; // return the final position to starGame: this position had gone through all checks and test and can be displayed on screen
+        return userPosition; // return the final position : this position had gone through all checks and test and can be displayed on screen
     }// end getP
 
 
+    /**
+     * To check who wins in less roll times
+     */
+    public static void checkWinner( int num1,int num2){
+        if(num1==num2){
+            System.out.println("Its a Tie ");
+        }
+        else if (num1>num2){
+            System.out.println("PLAYER 2 WINS WITH FEWER DICE ROLLS ");
+        }
+        else if (num1<num2){
+            System.out.println("PLAYER 1 WINS WITH FEWER DICE ROLLS");
+        }
+    }
 
         }
 
